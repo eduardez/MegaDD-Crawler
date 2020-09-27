@@ -52,6 +52,7 @@ class SeriesSpider(scrapy.Spider):
         ]
     series_index = 0
     max_depth = 3
+    use_max_depth = False
     
     def start_requests(self):
         yield FormRequest(
@@ -82,7 +83,7 @@ class SeriesSpider(scrapy.Spider):
         
         self.series_index += 1
         next_url = self.series_url + str(self.series_index)
-        if (len(media_container) == 0) or (self.series_index >= self.max_depth):
+        if (len(media_container) == 0) or (self.series_index >= self.max_depth and self.use_max_depth):
             print('Series finished')
         else:
             yield response.follow(next_url, callback=self.parse_series)
