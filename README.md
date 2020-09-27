@@ -3,16 +3,16 @@
 Crawler para Megadede, pero solo para la sección de series. Recorre todas las series disponibles y almacena en MongoDB la información obtenida.
 
 Lo que se extrae es:
-  -Titulo
-  -Temporadas
-  -Nombre de la temporada
-  -Número de temporada
-  -Capítulos
-  -Lenguaje
-  -Calidad
-  -Uploader
-  -Servidor
-  -Enlace externo
+  - Título
+  - Temporadas
+    - Nombre de la temporada
+    - Número de temporada
+  - Capítulos
+    - Lenguaje
+    - Calidad
+    - Uploader
+    - Servidor
+    - Enlace externo
 
 El crawler almacena la información en una base de datos MongoDB con tres tablas, una para series, otra para capitulos y una última para los enlaces externos de los capitulos.
 
